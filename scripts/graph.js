@@ -61,14 +61,14 @@ function generateChartData() {
     var firstDate = new Date();
     firstDate.setDate(firstDate.getDate() - 5);
 
-    for (var i = 0; i < 1000; i++) {
+    for (var i = 0; i < 14; i++) {
         // we create date objects here. In your data, you can have date strings
         // and then set format of your dates using chart.dataDateFormat property,
         // however when possible, use date objects, as this will speed up chart rendering.
         var newDate = new Date(firstDate);
         newDate.setDate(newDate.getDate() + i);
 
-        var visits = Math.round(Math.random() * (40 + i / 5)) + 20 + i;
+        var visits = Math.round((Math.random() * 400) + 1900);
 
         chartData.push({
             date: newDate,
