@@ -113,24 +113,14 @@
                   <span class="mdl-list__item-primary-content" style="display: inline-flex">
                     <span>Ethnicity</span>
                   </span>
-                  <B style="margin-right: -12px;">Asian</B>
+                  <b style="margin-right: -12px;" id="selectedEthnicity">Asian</b>
                   <span class="mdl-list__item-secondary-content" style="margin-right: 16px;">
                     
                     <button id="accbtn2" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
                       <i class="material-icons" role="presentation">arrow_drop_down</i>                      
                     </button>
-                    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn2">
-                      <li class="mdl-menu__item">American</li>
-                      <li class="mdl-menu__item">British</li>
-                      <li class="mdl-menu__item">Carribean</li>
-                      <li class="mdl-menu__item">Chinese</li>
-                      <li class="mdl-menu__item">French</li>
-                      <li class="mdl-menu__item">Greek</li>
-                      <li class="mdl-menu__item">Indian</li>
-                      <li class="mdl-menu__item">Italian</li>
-                      <li class="mdl-menu__item">Japanese</li>
-                      <li class="mdl-menu__item">Mexican</li>
-                      <li class="mdl-menu__item">Thai</li>
+                    <ul id="ethnicityDropdown"class="mdl-menu mdl-js-menu mdl-js-ripple-effect" for="accbtn2">
+                     
                     </ul>
                   </span>
                 </li>
@@ -142,11 +132,6 @@
                     <span>Calories</span>
                   </span>
                   <span class="mdl-list__item-secondary-content" style="margin-right: 16px;">
-                    <script langauage="javascript">
-                        function showMessage(value){
-                          document.getElementById("message").innerHTML = value;
-                        }	  
-                    </script>
                     <span id="message">0</span>
                   </span>
                 </li>
@@ -159,18 +144,13 @@
                   <span class="mdl-list__item-primary-content" style="display: inline-flex">
                     <span>Budget</span>
                   </span>
-                  <B style="margin-right: -12px;">&lt; $10</B>
+                  <B id="selectedBudget" style="margin-right: -12px;">&lt; $10</B>
                   <span class="mdl-list__item-secondary-content" style="margin-right: 16px;">
                     
                     <button id="accbtn3" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
                       <i class="material-icons" role="presentation">arrow_drop_down</i>                      
                     </button>
-                    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn3">
-                      <li class="mdl-menu__item">&lt; $10</li>
-                      <li class="mdl-menu__item">$10 - $20</li>
-                      <li class="mdl-menu__item">$20 - $30</li>
-                      <li class="mdl-menu__item">$40 - $50</li>
-                      <li class="mdl-menu__item">No Matter</li>
+                    <ul id="budgetDropdown" class="mdl-menu mdl-js-menu mdl-js-ripple-effect" for="accbtn3">
                     </ul>
                   </span>
                 </li>
@@ -181,19 +161,13 @@
                   <span class="mdl-list__item-primary-content" style="display: inline-flex">
                     <i style="margin-left: 10px;"class="material-icons" role="presentation">timer</i>  
                   </span>
-                  <B style="margin-right: -12px;">&lt; 10 mins</B>
+                  <B id="selectedTime"style="margin-right: -12px;">&lt; 10 mins</B>
                   <span class="mdl-list__item-secondary-content" style="margin-right: 16px;">
                     
                     <button id="accbtn4" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
                       <i class="material-icons" role="presentation">arrow_drop_down</i>                      
                     </button>
-                    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn4">
-                      <li class="mdl-menu__item">&lt; 10 mins</li>
-                      <li class="mdl-menu__item">10 - 20 mins</li>
-                      <li class="mdl-menu__item">20 - 30 mins</li>
-                      <li class="mdl-menu__item">40 - 50 mins</li>
-                      <li class="mdl-menu__item">50 - 60 mins</li>
-                      <li class="mdl-menu__item">No Matter</li>
+                    <ul id="timeDropdown" class="mdl-menu mdl-js-menu mdl-js-ripple-effect" for="accbtn4">
                     </ul>
                   </span>
                 </li>
@@ -257,5 +231,44 @@
       </svg>
     
     <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+      function showMessage(value){
+        document.getElementById("message").innerHTML = value;
+      }	
+
+      $(document).ready(function(){
+          var ethnicities = ["American", "British", "Carribean", "Chinese", "French", "Greek", "Indian", "Itialian", "Japanese", "Mexican", "Thai", "Any"];
+          $.each(ethnicities, function(index, value){
+              var $li = $("<li class='mdl-menu__item' onclick='updateSelectedEthnicity(this)'>" + value + "</li>"); 
+              $("#ethnicityDropdown").append($li);  
+          });
+
+          var budgets = ["&lt; $10", "$10 - $20", "$20 - $30", "$40 - $50", "Any"];
+          $.each(budgets, function(index, value){
+              var $li = $("<li class='mdl-menu__item' onclick='updateSelectedBudget(this)'>" + value + "</li>"); 
+              $("#budgetDropdown").append($li);  
+          });
+
+          var times = ["&lt; 10 mins", "10 - 20 mins", "20 - 30 mins", "40 - 50 mins", "50 - 60 mins", "Any"]
+          $.each(times, function(index, value){
+              var $li = $("<li class='mdl-menu__item' onclick='updateSelectedTime(this)'>" + value + "</li>"); 
+              $("#timeDropdown").append($li);  
+          });
+      });
+
+      function updateSelectedEthnicity(obj){
+        $("#selectedEthnicity").text(($(obj).text()));
+      }
+
+      function updateSelectedBudget(obj){
+        $("#selectedBudget").text(($(obj).text()));
+      }
+
+      function updateSelectedTime(obj){
+        $("#selectedTime").text(($(obj).text()));
+      }
+
+    </script>
   </body>
 </html>
