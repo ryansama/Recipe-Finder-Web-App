@@ -90,7 +90,7 @@
       </header>
       <div class="demo-drawer mdl-layout__drawer">
         <header class="demo-drawer-header">
-          <img src="images/user.png" class="demo-avatar">
+          <img src="images/user.jpg" class="demo-avatar">
           <div class="demo-avatar-dropdown">
             <span>hello@example.com</span>
             <div class="mdl-layout-spacer"></div>
@@ -121,7 +121,7 @@
         <div class="mdl-grid demo-content">
           <div class="demo-charts  mdl-cell mdl-cell--12-col mdl-grid">
             <div class="mdl-layout-spacer"></div>
-              <img src="images/user.png">
+              <img src="images/user.jpg">
             <div class="mdl-layout-spacer"></div>
           </div>
           <div class="demo-charts  mdl-cell mdl-cell--12-col mdl-grid" style="margin-top:-20px">
@@ -141,7 +141,7 @@
 
                   <li class="info-title">
                       <span>Age</span> 
-                      <span><button type="button" class="show-modal info-button" id="ageButton" style="margin-left: 40px;" disabled>2000/20/20</button></span>
+                      <span><button type="button" class="show-modal info-button" id="ageButton" style="margin-left: 40px;" onclick="change_date();">2000/20/20</button></span>
                       <span><img src="images/calendar-icon.png" style="width: 20px;height: 20px;margin-left: 5px;"></span>
                   </li>
 
@@ -163,12 +163,12 @@
 
                   <li class="info-title">
                       <span>Weight</span>
-                      <span><button type="button" class="info-button" id="weightButton" style="margin-left: 13px;">60kg</button></span>
+                      <span><button type="button" class="info-button" id="weightButton" style="margin-left: 13px;">60 kg</button></span>
                   </li>
 
                   <li class="info-title">
                     <span>Height</span>
-                    <span><button type="button" class="show-modal info-button" id="heightButton" style="margin-left: 17px;">160cm</button></span>
+                    <span><button type="button" class="show-modal info-button" id="heightButton" style="margin-left: 17px;">160 cm</button></span>
                   </li>
 
                   <li class="info-title">
@@ -250,6 +250,35 @@
         </defs>
       </svg>
 
+    <!-- age dialog and script-->
+    <dialog class="mdl-dialog" id="agetDialog">
+      <p>Enter your date of birth</p>
+      <div class="mdl-dialog__content">
+        <form action="#">
+          <div class="mdl-textfield mdl-js-textfield" style="width: 200px; float: left;">
+            <input class="mdl-textfield__input" type="text" id="ageInput" pattern ="\d{4}/\d{2}/\d{2}"onkeydown="if(event.keyCode == 13){change_age();}">
+            <label class="mdl-textfield__label" for="ageInput">YYYY/MM/DD</label>
+          </div>
+        </form>
+      </div>    
+    </dialog>
+    <script>
+      var ageDialog = document.querySelector('#agetDialog');
+      var ageButton = document.querySelector('#ageButton');
+      if(! ageDialog.showModal){
+        dialogPolyfill.registerDialog(ageDialog);
+      }
+      ageButton.addEventListener('click', function(){
+        ageDialog.showModal();
+      });
+
+      function change_age(){
+        var ageInput = document.getElementById("ageInput").value;
+        ageButton.innerHTML = ageInput;
+        ageDialog.close();
+      }
+    </script>
+
     <!-- Gender menu script -->
     <script>
       var genderText = document.querySelector('#gender-text');
@@ -265,12 +294,12 @@
       });
     </script>  
 
-    <!-- Weight dialog -->
+    <!-- Weight dialog + script -->
     <dialog class="mdl-dialog" id="weightDialog">
       <div class="mdl-dialog__content">
         <form action="#">
           <div class="mdl-textfield mdl-js-textfield" style="width: 200px; float: left;">
-            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="weightInput" >
+            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="weightInput" onkeydown="if (event.keyCode == 13){change_weight();}">
             <label class="mdl-textfield__label" for="weightInput">Weight in kg...</label>
             <span class="mdl-textfield__error">Input is not a number!</span>
           </div>
@@ -286,15 +315,22 @@
       weightButton.addEventListener('click', function(){
         weightDialog.showModal();
       });
+
+      function change_weight(){
+        var weightInput = document.getElementById("weightInput").value;
+        weightButton.innerHTML = weightInput + " kgs";
+        weightDialog.close();
+      }
+
     </script>  
 
-    <!-- Height dialog -->
+    <!-- Height dialog + script-->
     <dialog class="mdl-dialog" id="heightDialog">
       <div class="mdl-dialog__content">
         <form action="#">
           <div class="mdl-textfield mdl-js-textfield" style="width: 200px; float: left;">
-            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="weightInput" >
-            <label class="mdl-textfield__label" for="weightInput">Height in cm...</label>
+            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="heightInput" onkeydown="if(event.keyCode == 13){change_height();}">
+            <label class="mdl-textfield__label" for="heightInput">Height in cm...</label>
             <span class="mdl-textfield__error">Input is not a number!</span>
           </div>
         </form>
@@ -309,6 +345,11 @@
       heightButton.addEventListener('click', function(){
         heightDialog.showModal();
       });
+      function change_height(){
+        var heightInput = document.getElementById("heightInput").value;
+        heightButton.innerHTML = heightInput + " cms";
+        heightDialog.close();
+      }
     </script>  
 
     <a id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored mdl-color-text--white">Update</a>
