@@ -238,7 +238,7 @@
       }	
 
       $(document).ready(function(){
-          var ethnicities = ["American", "British", "Carribean", "Chinese", "French", "Greek", "Indian", "Itialian", "Japanese", "Mexican", "Thai", "Any"];
+          var ethnicities = ["American", "British", "Carribean", "Chinese", "French", "Greek", "Indian", "Italian", "Japanese", "Mexican", "Thai", "Any"];
           $.each(ethnicities, function(index, value){
               var $li = $("<li class='mdl-menu__item' onclick='updateSelectedEthnicity(this)'>" + value + "</li>"); 
               $("#ethnicityDropdown").append($li);  
