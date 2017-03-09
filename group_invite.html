@@ -18,7 +18,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <title>Group Meal Planner - RecipeFinder</title>
+    <title>Inbox - Group Meal Planner</title>
 
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
@@ -56,42 +56,13 @@
         margin-bottom: 40px;
         z-index: 900;
       }
-      .info-button {
-        background-color: white;
-        color: black;
-        border: 1px solid black;
-        font-size: 20px;
-        margin-top: 3px;
-        margin-bottom: 3px;
-      }
-      .info-title{
-        color: black;
-        margin-top: 5px;
-        margin-bottom: 5px;
-        font-size: 20px;
-        padding: 0px 2px 0px 2px;
-        margin-left: 40px;
-      }
-      .mdl-list{
-        align-content: center;
-        list-style:none;
-        position:relative;
-        width: 300px;
-        float: left;
-      }
     </style>
   </head>
   <body>
     <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
       <header class="demo-header mdl-layout__header">
         <div class="mdl-layout__header-row">
-          <span class="mdl-layout-title">Group Meal Planner</span>
-          <button id="group-menu" class="mdl-button mdl-js-button mdl-button--icon">
-            <i class="material-icons">more_vert</i>
-          </button>
-          <ul class="mdl-menu mdl-js-menu" for="group-menu">
-            <a href="group_invite.html" style="color:black;"><li class="mdl-menu__item">Inbox</li></a>
-          </ul>
+          <span class="mdl-layout-title">Inbox</span>
           <div class="mdl-layout-spacer"></div>
         </div>
       </header>
@@ -126,143 +97,14 @@
       </div>
 
       <style type="text/css">
-        .mdl-textfield{
-          width: fill;
-          padding-right: 5%;
-        }
-        #poll-options{
-          text-align: center;
-          margin-left: -20px;
-          list-style: none;
-        }
-        .poll-option{
-          text-align: center;
-          margin-left: auto;
-          margin-right: auto;
-        }
-        #poll-info{
-          list-style: none;
-          margin-top: -20px;
-          padding-left: 5%;
-        }
-        .food-chip{
-          text-align: left;
-          margin: 2%;
-        }
-        .mdl-chip{
-          width: 100%;
-          margin-left: -5px;
-          margin-bottom: 5%;
-        }
-        .mdl-chip__text{
-          text-align: left;
-          font-size: 15px;
-          font-weight: bold;
-        }
+
         .mdl-card{
           margin-left: auto;
           margin-right: auto;
           height: 600px;
         }
-        .mdl-chip__action{
-          float: right;
-          padding: 2px;
-        }
-      </style>
 
-      <main class="mdl-layout__content mdl-color--grey-50">
-        <div class="mdl-grid"">
-          <div class="mdl-cell--12-col" style="margin: 0 auto; max-height: 800px;">
-            <div class="mdl-card mdl-shadow--2dp mdl-cell--12-col mdl-cell--8-col-desktop" height: 600px; margin: 0 auto;" align="center">
-              <div class="mdl-card__supporting-text" style="text-align: left;">
-                <span>Create a poll</span>
-              </div>  
-
-              <ul id="poll-info">
-                <li class="recipient-list-item">
-                  <form action="#">
-                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell--12-col">
-                      <input class="mdl-textfield__input " type="text" id="recipient-input">
-                      <label class="mdl-textfield__label" for="recipient-input">To: </label>
-                    </div>
-                  </form>
-                </li>
-
-                <li class="recipient-list-item">
-                  <form action="#">
-                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell--12-col"">
-                      <input class="mdl-textfield__input " type="text" id="subject-input">
-                      <label class="mdl-textfield__label" for="subject-input">Subject: </label>
-                    </div>
-                  </form>
-                </li>
-              </ul>
-
-              <hr id="hr-top" align="center" width="90%">
-
-              <div class="mdl-grid">
-                <ul id="poll-options" >
-                  <li class="food-chip" id="chip1">
-                    <span class="mdl-chip mdl-chip--deletable">
-                        <span class="mdl-chip__text">Mac And Cheese</span>
-                        <button type="button" class="mdl-chip__action" onclick="removeChip1();"><i class="material-icons cancel-icon">cancel</i></button>
-                    </span>
-                  </li>
-                  <li class="food-chip" id = "chip2">
-                    <span class="mdl-chip mdl-chip--deletable">
-                        <span class="mdl-chip__text">Sweet And Sour Chicken Noodle</span>
-                        <button type="button" class="mdl-chip__action" onclick="removeChip2();"><i class="material-icons">cancel</i></button>
-                    </span>
-                  </li>
-                   <li class="food-chip" id="chip3">
-                    <span class="mdl-chip mdl-chip--deletable">
-                        <span class="mdl-chip__text">Mom's Spaghetti</span>
-                        <button type="button" class="mdl-chip__action" onclick="removeChip3();"><i class="material-icons">cancel</i></button>
-                    </span>
-                  </li>
-                  <li>
-                    <a href="recipes.html">
-                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect">
-                      <i class="material-icons">add</i>
-                    </button>
-                  </a>
-                  </li>
-                </ul>
-              </div>
-
-              <hr id="hr-bottom" align="center" width="90%">
-              <span id="send-button">
-                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-                  Send
-                </button>
-              </span>
-
-            </div>
-          </div>
-        </div>
-      </main>
-
-      <!--Scripts for removing poll options -->
-      <script type="text/javascript">
-        function removeChip1() {
-          var elem = document.getElementById('chip1');
-          elem.parentNode.removeChild(elem);
-          return false;
-        }
-        function removeChip2(){
-          var elem = document.getElementById('chip2');
-          elem.parentNode.removeChild(elem);
-          return false;
-        }
-        function removeChip3(){
-          var elem = document.getElementById('chip3');
-          elem.parentNode.removeChild(elem);
-          return false;
-        }
-      </script>
-
-      <style type="text/css">
-        #send-button{
+        #submit-button{
           position: absolute;
           bottom: 0;
           right: 0;
@@ -279,9 +121,107 @@
           margin-left: auto;
           margin-right: auto;
         }
+        #top-list > .mdl-list__item{
+          margin-left: 5%;
+        }
+        #top-list{
+          margin-top: -15px;
+        }
+        #bottom-list > .mdl-list__item{
+          margin-left: 5%;
+        }
+        #bottom-list{
+          text-align: center;
+          display: inline-block;
+        }
+        .mdl-card__title-text{
 
+        }
       </style>
 
+      <main class="mdl-layout__content mdl-color--grey-50">
+        <div class="mdl-grid"">
+          <div class="mdl-cell--12-col" style="margin: 0 auto; max-height: 800px;">
+            <div class="mdl-card mdl-shadow--2dp mdl-cell--12-col mdl-cell--8-col-desktop" height: 600px; margin: 0 auto;" align="center">
+              <div class="mdl-card__supporting-text" style="text-align: left;">
+                <span>From Alan Cooper</span>
+              </div>  
+
+              <ul class="mdl-list" id="top-list">
+                <li class="mdl-list__item">
+                  <div class="mdl-card__title-text">
+                    <h3 class="mdl-card__title-text">Subject: what would you like for dinner?</h3>
+                  </div>
+                </li>
+
+                <li class="mdl-list__item">
+                  <span><i class="material-icons">access_time</i></span>
+                  <div id="p1" class="mdl-progress mdl-js-progress" style="margin-left: 2%"></div>
+                </li>
+              </ul>
+              
+              <hr id="hr-top" width="90%">
+
+              <ul class="mdl-list" id="bottom-list">
+                <li class="mdl-list__item">
+                  <label for="radio1" class="mdl-radio mdl-js-radio">
+                    <input type="radio" id="radio1" name="vote" value="on"  class="mdl-radio__button">
+                    <span>Mac & Cheese</span>
+                  </label>
+                </li>
+
+                <li class="mdl-list__item">
+                  <label for="radio2" class="mdl-radio mdl-js-radio">
+                    <input type="radio" id="radio2" name="vote" class="mdl-radio__button">
+                    <span>Sweet & Sour Chicken Noodle</span>
+                  </label>
+                </li>
+
+              </ul>
+
+
+              <hr id="hr-bottom" align="center" width="90%">
+
+              <button id="submit-button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                Submit
+              </button>
+
+              <div id="load-animation">
+              </div>
+
+              <div id="submit-demo" class="mdl-js-snackbar mdl-snackbar">
+                <div class="mdl-snackbar__text"></div>
+                <button class="mdl-snackbar__action" type="button"></button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <script type="text/javascript">
+        document.querySelector('#p1').addEventListener('mdl-componentupgraded', function() {
+          this.MaterialProgress.setProgress(44);
+        });
+
+        (function() {
+          'use strict';
+          window['counter'] = 0;
+          var snackbarContainer = document.querySelector('#submit-demo');
+          var showToastButton = document.querySelector('#submit-button');
+          showToastButton.addEventListener('click', function() {
+            'use strict';
+            var data = {message: 'Your vote has been submitted'};
+            snackbarContainer.MaterialSnackbar.showSnackbar(data);
+            setTimeout(groupRedirect, 3000);
+          });
+        }());
+
+        function groupRedirect(){
+          window.location.href = "group.html" ;
+        }
+
+      </script>
 
     </div>
       <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" style="position: fixed; left: -1000px; height: -1000px;">
