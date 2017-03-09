@@ -120,46 +120,62 @@
       </div>
 
       <style type="text/css">
-        #recipient-textfield{
-          width: 600px;
-          min-width: 600px;
+        .mdl-textfield{
+          width: fill;
+          padding-right: 5%;
+        }
+        #poll-options{
+          text-align: center;
+          margin-left: -20px;
+          list-style: none;
         }
         .poll-option{
+          text-align: center;
           margin-left: auto;
           margin-right: auto;
         }
         #poll-info{
           list-style: none;
           margin-top: -20px;
-        }
-        #poll-menu{
-          list-style: none;
+          padding-left: 5%;
         }
         .food-chip{
-          margin-left:-20px;
-          text-align: center;
-          margin-top: 10px;
-          margin-bottom: 10px;
+          text-align: left;
+          margin: 2%;
+        }
+        .mdl-chip{
+          width: 100%;
+          margin-left: -5px;
+          margin-bottom: 5%;
         }
         .mdl-chip__text{
           text-align: left;
-          width: 300px;
-          font-size: 20px;
+          font-size: 15px;
+          font-weight: bold;
+        }
+        .mdl-card{
+          margin-left: auto;
+          margin-right: auto;
+          height: 600px;
+        }
+        .mdl-chip__action{
+          float: right;
+          padding: 2px;
         }
       </style>
 
       <main class="mdl-layout__content mdl-color--grey-50">
-        <div class="mdl-grid">
-          <div class="mdl-cell--6-col" style="margin: 0 auto; max-height: 600px;">
-            <div class="mdl-card mdl-shadow--2dp" style="width: 700px; height: 600px; margin: 0 auto;">
-              <div class="mdl-card__supporting-text">
+        <div class="mdl-grid"">
+          <div class="mdl-cell--12-col" style="margin: 0 auto; max-height: 800px;">
+            <div class="mdl-card mdl-shadow--2dp mdl-cell--12-col mdl-cell--8-col-desktop" height: 600px; margin: 0 auto;" align="center">
+              <div class="mdl-card__supporting-text" style="text-align: left;">
                 <span>Create a poll</span>
               </div>  
 
               <ul id="poll-info">
                 <li class="recipient-list-item">
                   <form action="#">
-                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" id="recipient-textfield">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell--12-col">
                       <input class="mdl-textfield__input " type="text" id="recipient-input">
                       <label class="mdl-textfield__label" for="recipient-input">To: </label>
                     </div>
@@ -168,7 +184,7 @@
 
                 <li class="recipient-list-item">
                   <form action="#">
-                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" id="recipient-textfield">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell--12-col"">
                       <input class="mdl-textfield__input " type="text" id="subject-input">
                       <label class="mdl-textfield__label" for="subject-input">Subject: </label>
                     </div>
@@ -178,47 +194,42 @@
 
               <hr id="hr-top" align="center" width="90%">
 
-              <ul id="poll-menu" style="margin-top: -10px;">
-                <li class="food-chip" id="chip1">
-                  <span class="mdl-chip mdl-chip--deletable">
-                      <span class="mdl-chip__text">Mac And Cheese</span>
-                      <button type="button" class="mdl-chip__action" onclick="removeChip1();"><i class="material-icons">cancel</i></button>
-                  </span>
-                </li>
-                <li class="food-chip" id = "chip2">
-                  <span class="mdl-chip mdl-chip--deletable">
-                      <span class="mdl-chip__text">Sweet And Sour Chicken Noodle</span>
-                      <button type="button" class="mdl-chip__action" onclick="removeChip2();"><i class="material-icons">cancel</i></button>
-                  </span>
-                </li>
-                 <li class="food-chip" id="chip3">
-                  <span class="mdl-chip mdl-chip--deletable">
-                      <span class="mdl-chip__text">Mom's Spaghetti</span>
-                      <button type="button" class="mdl-chip__action" onclick="removeChip3();"><i class="material-icons">cancel</i></button>
-                  </span>
-                </li>
-                <li class="food-chip">
-                  <a href="recipes.html">
+              <div class="mdl-grid">
+                <ul id="poll-options" >
+                  <li class="food-chip" id="chip1">
+                    <span class="mdl-chip mdl-chip--deletable">
+                        <span class="mdl-chip__text">Mac And Cheese</span>
+                        <button type="button" class="mdl-chip__action" onclick="removeChip1();"><i class="material-icons cancel-icon">cancel</i></button>
+                    </span>
+                  </li>
+                  <li class="food-chip" id = "chip2">
+                    <span class="mdl-chip mdl-chip--deletable">
+                        <span class="mdl-chip__text">Sweet And Sour Chicken Noodle</span>
+                        <button type="button" class="mdl-chip__action" onclick="removeChip2();"><i class="material-icons">cancel</i></button>
+                    </span>
+                  </li>
+                   <li class="food-chip" id="chip3">
+                    <span class="mdl-chip mdl-chip--deletable">
+                        <span class="mdl-chip__text">Mom's Spaghetti</span>
+                        <button type="button" class="mdl-chip__action" onclick="removeChip3();"><i class="material-icons">cancel</i></button>
+                    </span>
+                  </li>
+                  <li>
+                    <a href="recipes.html">
                     <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect">
                       <i class="material-icons">add</i>
                     </button>
                   </a>
-                </li>
-              </ul>
-
-
-              <div>
-                <hr id="hr-bottom" align="center" width="90%">
+                  </li>
+                </ul>
               </div>
 
-
+              <hr id="hr-bottom" align="center" width="90%">
               <span id="send-button">
                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
                   Send
                 </button>
               </span>
-
-              
 
             </div>
           </div>
