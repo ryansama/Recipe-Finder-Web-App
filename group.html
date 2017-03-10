@@ -79,6 +79,11 @@
         width: 300px;
         float: left;
       }
+      #invite-menu{
+         position: absolute;
+         right: 0;
+      }
+
     </style>
   </head>
   <body>
@@ -86,12 +91,16 @@
       <header class="demo-header mdl-layout__header">
         <div class="mdl-layout__header-row">
           <span class="mdl-layout-title">Group Meal Planner</span>
-          <button id="group-menu" class="mdl-button mdl-js-button mdl-button--icon">
-            <i class="material-icons">more_vert</i>
-          </button>
-          <ul class="mdl-menu mdl-js-menu" for="group-menu">
-            <a href="group_invite.html" style="color:black;"><li class="mdl-menu__item">Inbox</li></a>
+
+
+         <button id="invite-menu" class="mdl-button mdl-button-lower-right mdl-js-button mdl-button--icon">
+           <i class="material-icons">markunread_mailbox</i>
+         </button>
+
+          <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="invite-menu">
+            <a href="group_invite.html" style="color:black;"><li class="mdl-menu__item">New Poll from: Alan Cooper</li></a>
           </ul>
+
           <div class="mdl-layout-spacer"></div>
         </div>
       </header>
@@ -129,6 +138,7 @@
         .mdl-textfield{
           width: fill;
           padding-right: 5%;
+          margin-right: 5%;
         }
         #poll-options{
           text-align: center;
@@ -168,6 +178,7 @@
           float: right;
           padding: 2px;
         }
+
       </style>
 
       <main class="mdl-layout__content mdl-color--grey-50">
@@ -182,7 +193,7 @@
                 <li class="recipient-list-item">
                   <form action="#">
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell--12-col">
-                      <input class="mdl-textfield__input " type="text" id="recipient-input">
+                      <input class="mdl-textfield__input " type="text" id="recipient-input" pattern="[a-zA-Z0-9]*">
                       <label class="mdl-textfield__label" for="recipient-input">To: </label>
                     </div>
                   </form>
@@ -191,7 +202,7 @@
                 <li class="recipient-list-item">
                   <form action="#">
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell--12-col"">
-                      <input class="mdl-textfield__input " type="text" id="subject-input">
+                      <input class="mdl-textfield__input " type="text" id="subject-input" pattern=".*">
                       <label class="mdl-textfield__label" for="subject-input">Subject: </label>
                     </div>
                   </form>
