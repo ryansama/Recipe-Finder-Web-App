@@ -158,7 +158,7 @@
           <a class="mdl-navigation__link" href="user_profile.html"><i class="material-icons">account_circle</i>User Profile</a>
           <a class="mdl-navigation__link" href="recipes.html"><i class="material-icons">restaurant_menu</i>Recipes</a>
           <a class="mdl-navigation__link" href=""><i class="material-icons">book</i>Saved Recipes</a>
-          <a class="mdl-navigation__link" href=""><i class="material-icons">assignment</i>7 Day Planner</a>
+          <a class="mdl-navigation__link" href="weekly_meal_planner.html"><i class="material-icons">assignment</i>7 Day Planner</a>
           <a class="mdl-navigation__link" href="healthtracker.html"><i class="material-icons">assessment</i>Health Tracker</a>
           <a class="mdl-navigation__link" href="group.html"><i class="material-icons">group</i>Group Meal Planner</a>
           <a class="mdl-navigation__link" href=""><i class="material-icons">help_outline</i>Help & Support</a>
@@ -240,23 +240,23 @@
                     </span>
                   </li>
 
-                   <li class="food-chip" id = "chip2">
+                   <li class="food-chip" id = "chip3">
                     <span class="mdl-chip mdl-chip--deletable">
                         <span class="mdl-chip__text">Quinoa Salad</span>
-                        <button type="button" class="mdl-chip__action" onclick="removeChip2();"><i class="material-icons">cancel</i></button>
+                        <button type="button" class="mdl-chip__action" onclick="removeChip3();"><i class="material-icons">cancel</i></button>
                     </span>
                   </li>
 
-                   <li class="food-chip" id = "chip2">
+                   <li class="food-chip" id = "chip4">
                     <span class="mdl-chip mdl-chip--deletable">
                         <span class="mdl-chip__text">Apple Turnover</span>
-                        <button type="button" class="mdl-chip__action" onclick="removeChip2();"><i class="material-icons">cancel</i></button>
+                        <button type="button" class="mdl-chip__action" onclick="removeChip4();"><i class="material-icons">cancel</i></button>
                     </span>
                   </li>
-                   <li class="food-chip" id = "chip2">
+                   <li class="food-chip" id = "chip5">
                     <span class="mdl-chip mdl-chip--deletable">
                         <span class="mdl-chip__text">Beef Stew</span>
-                        <button type="button" class="mdl-chip__action" onclick="removeChip2();"><i class="material-icons">cancel</i></button>
+                        <button type="button" class="mdl-chip__action" onclick="removeChip5();"><i class="material-icons">cancel</i></button>
                     </span>
                   </li>
 
@@ -288,34 +288,34 @@
               <hr id="hr-top" align="center" width="90%">
               <div class="mdl-grid">
                 <ul id="poll-options" >
-                  <li class="food-chip" id="chip1">
+                  <li class="food-chip" id="chip6">
                     <span class="mdl-chip mdl-chip--deletable">
                         <span class="mdl-chip__text">Fish and Chips</span>
-                        <button type="button" class="mdl-chip__action" onclick="removeChip1();"><i class="material-icons cancel-icon">cancel</i></button>
+                        <button type="button" class="mdl-chip__action" onclick="removeChip6();"><i class="material-icons cancel-icon">cancel</i></button>
                     </span>
                   </li>
-                   <li class="food-chip" id = "chip2">
+                   <li class="food-chip" id = "chip7">
                     <span class="mdl-chip mdl-chip--deletable">
                         <span class="mdl-chip__text">Phở</span>
-                        <button type="button" class="mdl-chip__action" onclick="removeChip2();"><i class="material-icons">cancel</i></button>
+                        <button type="button" class="mdl-chip__action" onclick="removeChip7();"><i class="material-icons">cancel</i></button>
                     </span>
                   </li>
-                   <li class="food-chip" id = "chip2">
+                   <li class="food-chip" id = "chip8">
                     <span class="mdl-chip mdl-chip--deletable">
                         <span class="mdl-chip__text">Lasagna</span>
-                        <button type="button" class="mdl-chip__action" onclick="removeChip2();"><i class="material-icons">cancel</i></button>
+                        <button type="button" class="mdl-chip__action" onclick="removeChip8();"><i class="material-icons">cancel</i></button>
                     </span>
                   </li>
-                   <li class="food-chip" id = "chip2">
+                   <li class="food-chip" id = "chip9">
                     <span class="mdl-chip mdl-chip--deletable">
                         <span class="mdl-chip__text">Baked Banana Bread</span>
-                        <button type="button" class="mdl-chip__action" onclick="removeChip2();"><i class="material-icons">cancel</i></button>
+                        <button type="button" class="mdl-chip__action" onclick="removeChip9();"><i class="material-icons">cancel</i></button>
                     </span>
                   </li>
-                   <li class="food-chip" id = "chip2">
+                   <li class="food-chip" id = "chip10">
                     <span class="mdl-chip mdl-chip--deletable">
                         <span class="mdl-chip__text">Honey & Garlic Chicken Wings</span>
-                        <button type="button" class="mdl-chip__action" onclick="removeChip2();"><i class="material-icons">cancel</i></button>
+                        <button type="button" class="mdl-chip__action" onclick="removeChip10();"><i class="material-icons">cancel</i></button>
                     </span>
                   </li>
                   <li>
@@ -497,72 +497,7 @@
           padding: 2px;
         }
       </style>
-      <main class="mdl-layout__content mdl-color--grey-50">
-        <div class="mdl-grid"">
-          <div class="mdl-cell--12-col" style="margin: 0 auto; max-height: 800px;">
-            <div class="mdl-card mdl-shadow--2dp mdl-cell--12-col mdl-cell--8-col-desktop" height: 600px; margin: 0 auto;" align="center">
-              <div class="mdl-card__supporting-text" style="text-align: left;">
-                <span>Create a poll</span>
-              </div>  
-              <ul id="poll-info">
-                <li class="recipient-list-item">
-                  <form action="#">
-                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell--12-col">
-                      <input class="mdl-textfield__input " type="text" id="recipient-input" pattern="[a-zA-Z0-9]*">
-                      <label class="mdl-textfield__label" for="recipient-input">To: </label>
-                    </div>
-                  </form>
-                </li>
-                <li class="recipient-list-item">
-                  <form action="#">
-                  
-                  </form>
-                </li>
-              </ul>
 
-              <hr id="hr-top" align="center" width="90%">
-
-              <div class="mdl-grid">
-                <ul id="poll-options" >
-                  <li class="food-chip" id="chip1">
-                    <span class="mdl-chip mdl-chip--deletable">
-                        <span class="mdl-chip__text">Mac And Cheese</span>
-                        <button type="button" class="mdl-chip__action" onclick="removeChip1();"><i class="material-icons cancel-icon">cancel</i></button>
-                    </span>
-                  </li>
-                  <li class="food-chip" id = "chip2">
-                    <span class="mdl-chip mdl-chip--deletable">
-                        <span class="mdl-chip__text">Sweet And Sour Chicken Noodle</span>
-                        <button type="button" class="mdl-chip__action" onclick="removeChip2();"><i class="material-icons">cancel</i></button>
-                    </span>
-                  </li>
-                   <li class="food-chip" id="chip3">
-                    <span class="mdl-chip mdl-chip--deletable">
-                        <span class="mdl-chip__text">Mom's Spaghetti</span>
-                        <button type="button" class="mdl-chip__action" onclick="removeChip3();"><i class="material-icons">cancel</i></button>
-                    </span>
-                  </li>
-                  <li>
-                    <a href="recipes.html">
-                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect">
-                      <i class="material-icons">add</i>
-                    </button>
-                  </a>
-                  </li>
-                </ul>
-              </div>
-
-              <hr id="hr-bottom" align="center" width="90%">
-              <span id="send-button">
-                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-                  Send
-                </button>
-              </span>
-
-            </div>
-          </div>
-        </div>
-      </main>
 
       <!--Scripts for removing poll options -->
       <script type="text/javascript">
@@ -581,6 +516,43 @@
           elem.parentNode.removeChild(elem);
           return false;
         }
+         function removeChip4(){
+          var elem = document.getElementById('chip4');
+          elem.parentNode.removeChild(elem);
+          return false;
+        }
+         function removeChip5(){
+          var elem = document.getElementById('chip5');
+          elem.parentNode.removeChild(elem);
+          return false;
+        }
+         function removeChip6(){
+          var elem = document.getElementById('chip6');
+          elem.parentNode.removeChild(elem);
+          return false;
+        }
+         function removeChip7(){
+          var elem = document.getElementById('chip7');
+          elem.parentNode.removeChild(elem);
+          return false;
+        }
+         function removeChip8(){
+          var elem = document.getElementById('chip8');
+          elem.parentNode.removeChild(elem);
+          return false;
+        }
+         function removeChip9(){
+          var elem = document.getElementById('chip9');
+          elem.parentNode.removeChild(elem);
+          return false;
+          
+        }
+         function removeChip10(){
+          var elem = document.getElementById('chip10');
+          elem.parentNode.removeChild(elem);
+          return false;
+         }
+        
       </script>
 
       <style type="text/css">
