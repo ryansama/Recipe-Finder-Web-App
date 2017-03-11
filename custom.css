@@ -7,29 +7,40 @@
 
 .alignLow {
     text-align:left;
-    text-transform: uppercase;
+    text-transform: none;
+    width:100%;
     font-size:22px;
     padding-top:0.5%;
 }
 
+.alignMore {
+    text-align:center;
+    padding-bottom:0%;
+     padding-top:1%;
+    text-transform: none;
+    width:100%;
+    font-size:70px;
+}
+
+
 .alignMed {
-    text-align:left;
-    text-transform: uppercase;
+     text-align:left;
+    text-transform: none;
+    width:100%;
     font-size:22px;
     padding-top:0.5%;
 }
 
 .alignHigh {
-    text-align:left;
-    text-transform: uppercase;
+   text-align:left;
+    text-transform: none;
+    width:100%;
     font-size:22px;
     padding-top:0.5%;
 }
 
 .alignLow span {
-        width: 100px;
         float: right;
-        padding-left: 0px;
         font-size:20px;
         color:red;
         font-weight:bold;
@@ -37,21 +48,19 @@
 }
 
 .alignMed span {
-        width: 100px;
         float: right;
-        padding-left: 0px;
         font-size:20px;
-        color:#E5E500;
+        color:yellow;
         font-weight:bold;
 
 }
 
 .alignHigh span {
-        width: 100px;
-        float: right;
-        padding-left: 0px;
+       float: right;
         font-size:20px;
-        color:lightgreen;
+        color:limegreen;
         font-weight:bold;
 
 }
+
+
