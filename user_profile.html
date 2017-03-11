@@ -283,12 +283,10 @@
     <!-- age dialog and script-->
     <dialog class="mdl-dialog" id="agetDialog">
       <div class="mdl-dialog__content">
-        <form action="#">
-          <div class="mdl-textfield mdl-js-textfield" style="width: 250px; float: left;">
-            <input class="mdl-textfield__input" type="text" id="ageInput" pattern ="\d{4}/\d{2}/\d{2}"onkeydown="if(event.keyCode == 13){change_age();}">
-            <label class="mdl-textfield__label" for="ageInput">YYYY/MM/DD</label>
-          </div>
-        </form>
+        <div class="mdl-textfield mdl-js-textfield" style="width: 250px; float: left;">
+          <input class="mdl-textfield__input" type="text" id="ageInput" pattern ="\d{4}/\d{2}/\d{2}"onkeydown="if(event.keyCode == 13){change_age();}">
+          <label class="mdl-textfield__label" for="ageInput">YYYY/MM/DD</label>
+        </div>
       </div>    
     </dialog>
     <script>
@@ -326,13 +324,11 @@
     <!-- Weight dialog + script -->
     <dialog class="mdl-dialog" id="weightDialog">
       <div class="mdl-dialog__content">
-        <form action="#">
-          <div class="mdl-textfield mdl-js-textfield" style="width: 200px; float: left;">
-            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="weightInput" onkeydown="if (event.keyCode == 13){change_weight();}">
-            <label class="mdl-textfield__label" for="weightInput">Weight in kg...</label>
-            <span class="mdl-textfield__error">Input is not a number!</span>
-          </div>
-        </form>
+        <div class="mdl-textfield mdl-js-textfield" style="width: 200px; float: left;">
+          <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="weightInput" onkeydown="if (event.keyCode == 13){change_weight();}">
+          <label class="mdl-textfield__label" for="weightInput">Weight in kg...</label>
+          <span class="mdl-textfield__error">Input is not a number!</span>
+        </div>
       </div>    
     </dialog>
     <script>
@@ -356,13 +352,11 @@
     <!-- Height dialog + script-->
     <dialog class="mdl-dialog" id="heightDialog">
       <div class="mdl-dialog__content">
-        <form action="#">
-          <div class="mdl-textfield mdl-js-textfield" style="width: 200px; float: left;">
-            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="heightInput" onkeydown="if(event.keyCode == 13){change_height();}">
-            <label class="mdl-textfield__label" for="heightInput">Height in cm...</label>
-            <span class="mdl-textfield__error">Input is not a number!</span>
-          </div>
-        </form>
+        <div class="mdl-textfield mdl-js-textfield" style="width: 200px; float: left;">
+          <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="heightInput" onkeydown="if(event.keyCode == 13){change_height();}">
+          <label class="mdl-textfield__label" for="heightInput">Height in cm...</label>
+          <span class="mdl-textfield__error">Input is not a number!</span>
+        </div>
       </div>    
     </dialog>
     <script>
