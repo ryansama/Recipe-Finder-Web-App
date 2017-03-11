@@ -2,10 +2,13 @@
 <!--
   Material Design Lite
   Copyright 2015 Google Inc. All rights reserved.
+
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
   You may obtain a copy of the License at
+
       https://www.apache.org/licenses/LICENSE-2.0
+
   Unless required by applicable law or agreed to in writing, software
   distributed under the License is distributed on an "AS IS" BASIS,
   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -45,7 +48,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.light_green-orange.min.css" />
     <link rel="stylesheet" href="styles.css">
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
     
     <style>
@@ -64,7 +66,7 @@
     <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
       <header class="demo-header mdl-layout__header">
         <div class="mdl-layout__header-row">
-          <span class="mdl-layout-title">Saved Recipes</span>
+          <span class="mdl-layout-title">Recipes</span>
           <div class="mdl-layout-spacer"></div>
 
         </div>
@@ -107,110 +109,67 @@
               <input class="mdl-textfield__input" type="text" id="sample3">
               <label class="mdl-textfield__label" for="sample3">Type Name of Recipe</label>
             </div>
-              <a href="#">
-          <span class="glyphicon glyphicon-sort-by-alphabet"></span>
-        </a>
-             <a href="#">
-          <span class="glyphicon glyphicon-sort-by-attributes"></span>
-        </a>
-       
-     
+           <i class="material-icons">sort_by_alpha</i>
+           <i class="material-icons">sort</i>
           </form>
           
           <div class="mdl-layout-spacer"></div>
           <div class="demo-charts mdl-card__supporting-text mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
             <div class="mdl-cell mdl-cell--12-col ">
             <div class="demo-list-action mdl-list">
-              <div class="mdl-list__item">
+              <div class="mdl-list__item" onclick="window.open('index.html', '_self')">
                 <span class="mdl-list__item-primary-content">
-                
-                  <li class="food-chip" id="chip1">
-                    <span class="mdl-chip mdl-chip--deletable">
-                        <span class="mdl-chip__text">Sweet and Sour Pork</span>
-                        <button type="button" class="mdl-chip__action" onclick="removeChip1();"><i class="material-icons cancel-icon">cancel</i></button>
-                    </span>
-                  </li>
-         
-                 
+                  
+                  <span>Sweet and Sour Pork</span>
                 </span>
-                <a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">keyboard_arrow_right</i></a>
-              </div>    
+                <a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">clear</i></a>
+              </div>  
               <hr style="margin: 0em">
               <div class="mdl-list__item">
                 <span class="mdl-list__item-primary-content">
                   
-                     <li class="food-chip" id="chip2">
-                    <span class="mdl-chip mdl-chip--deletable">
-                        <span class="mdl-chip__text">Chicken Breast</span>
-                        <button type="button" class="mdl-chip__action" onclick="removeChip2();"><i class="material-icons cancel-icon">cancel</i></button>
-                    </span>
-                  </li>
-         
+                  <span>Chicken Breast</span>
                 </span>
-                <a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">keyboard_arrow_right</i></a>
+                <a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">clear</i></a>
               </div>
               <hr style="margin: 0em">
               <div class="mdl-list__item">
                 <span class="mdl-list__item-primary-content">
                   
-                     <li class="food-chip" id="chip3">
-                    <span class="mdl-chip mdl-chip--deletable">
-                        <span class="mdl-chip__text">Mac And Cheese</span>
-                        <button type="button" class="mdl-chip__action" onclick="removeChip3();"><i class="material-icons cancel-icon">cancel</i></button>
-                    </span>
-                  </li>
-         
+                  <span>Baklava</span>
                 </span>
                 <span class="mdl-list__item-secondary-content">
-                  <a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">keyboard_arrow_right</i></a>
+                  <a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">clear</i></a>
               </span>
               </div>
               <hr style="margin: 0em">
               <div class="mdl-list__item">
                 <span class="mdl-list__item-primary-content">
                   
-                 <li class="food-chip" id="chip4">
-                    <span class="mdl-chip mdl-chip--deletable">
-                        <span class="mdl-chip__text">Baklava</span>
-                        <button type="button" class="mdl-chip__action" onclick="removeChip4();"><i class="material-icons cancel-icon">cancel</i></button>
-                    </span>
-                  </li>
-         
+                  <span>Spicy Chicken Strips</span>
                 </span>
                 <span class="mdl-list__item-secondary-content">
-                  <a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">keyboard_arrow_right</i></a>
+                  <a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">clear</i></a>
               </span>
               </div>
               <hr style="margin: 0em">
               <div class="mdl-list__item">
                 <span class="mdl-list__item-primary-content">
                   
-                    <li class="food-chip" id="chip5">
-                    <span class="mdl-chip mdl-chip--deletable">
-                        <span class="mdl-chip__text">Chicken Soup</span>
-                        <button type="button" class="mdl-chip__action" onclick="removeChip5();"><i class="material-icons cancel-icon">cancel</i></button>
-                    </span>
-                  </li>
-         
+                  <span>Thai Noodle Soup</span>
                 </span>
                 <span class="mdl-list__item-secondary-content">
-                  <a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">keyboard_arrow_right</i></a>
+                  <a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">clear</i></a>
               </span>
               </div>
               <hr style="margin: 0em">
               <div class="mdl-list__item">
                 <span class="mdl-list__item-primary-content">
                   
-                    <li class="food-chip" id="chip6">
-                    <span class="mdl-chip mdl-chip--deletable">
-                        <span class="mdl-chip__text">Vegan Brownies</span>
-                        <button type="button" class="mdl-chip__action" onclick="removeChip6();"><i class="material-icons cancel-icon">cancel</i></button>
-                    </span>
-                  </li>
-         
+                  <span>Lasagna</span>
                 </span>
                 <span class="mdl-list__item-secondary-content">
-                  <a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">keyboard_arrow_right</i></a>
+                  <a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">clear</i></a>
               </span>
               </div>
             </div>
@@ -267,39 +226,7 @@
           </g>
         </defs>
       </svg>
-     <!--Scripts for removing poll options -->
-      <script type="text/javascript">
-        function removeChip1() {
-          var elem = document.getElementById('chip1');
-          elem.parentNode.removeChild(elem);
-          return false;
-        }
-        function removeChip2(){
-          var elem = document.getElementById('chip2');
-          elem.parentNode.removeChild(elem);
-          return false;
-        }
-        function removeChip3(){
-          var elem = document.getElementById('chip3');
-          elem.parentNode.removeChild(elem);
-          return false;
-        }
-           function removeChip4(){
-          var elem = document.getElementById('chip4');
-          elem.parentNode.removeChild(elem);
-          return false;
-        }
-           function removeChip5(){
-          var elem = document.getElementById('chip5');
-          elem.parentNode.removeChild(elem);
-          return false;
-        }
-          function removeChip6(){
-          var elem = document.getElementById('chip6');
-          elem.parentNode.removeChild(elem);
-          return false;
-        }
-        </script>
+    
     <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   </body>
