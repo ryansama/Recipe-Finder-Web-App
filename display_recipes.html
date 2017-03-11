@@ -21,7 +21,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <title>Recipes - RecipeFinder</title>
+    <title>Display Recipes - RecipeFinder</title>
 
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
@@ -101,82 +101,78 @@
         </nav>
       </div>
       <main class="mdl-layout__content mdl-color--grey-100">
+        
         <div class="mdl-grid demo-content ">
+          <div class="mdl-layout-spacer"></div>
+          <form action="#">
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <input class="mdl-textfield__input" type="text" id="sample3">
+              <label class="mdl-textfield__label" for="sample3">Type Ingredients</label>
+            </div>
+            <i class="material-icons" >sort_by_alpha</i>
+          </form>
+          
+          <div class="mdl-layout-spacer"></div>
           <div class="demo-charts mdl-card__supporting-text mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
-            <h3 style="font-size: 1em; line-height: 0px; margin-bottom: -8px;">Choose Category</h3>
             <div class="mdl-cell mdl-cell--12-col ">
-            <ul class="profile-list mdl-list ">
-
+            <div class="demo-list-action mdl-list">
+              <div class="mdl-list__item" onclick="window.open('index.html', '_self')">
+                <span class="mdl-list__item-primary-content">
+                  
+                  <span>Chicken Soup</span>
+                </span>
+                <a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">keyboard_arrow_right</i></a>
+              </div>
               <hr style="margin: 0em">
-
-                <li class="mdl-list__item mdl-list__item--two-line ">
-                  <span class="mdl-list__item-primary-content" style="display: inline-flex">
-                    <span>Ethnicity</span>
-                  </span>
-                  <b style="margin-right: -12px;" id="selectedEthnicity">Asian</b>
-                  <span class="mdl-list__item-secondary-content" style="margin-right: 16px;">
-                    
-                    <button id="accbtn2" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-                      <i class="material-icons" role="presentation">arrow_drop_down</i>                      
-                    </button>
-                    <ul id="ethnicityDropdown"class="mdl-menu mdl-js-menu mdl-js-ripple-effect" for="accbtn2">
-                     
-                    </ul>
-                  </span>
-                </li>
-
-                <hr style="margin: 0em">
-
-                <li class="mdl-list__item mdl-list__item--two-line ">
-                  <span class="mdl-list__item-primary-content" style="display: inline-flex">
-                    <span>Calories</span>
-                  </span>
-                  <span class="mdl-list__item-secondary-content" style="margin-right: 16px;">
-                    <span id="message">0</span>
-                  </span>
-                </li>
-                <input class="mdl-slider mdl-js-slider" type="range" min="0" max="2000" value="25" tabindex="0" oninput="showMessage(this.value)" onchange="showMessage(this.value)">
-                <div style="margin-top:14px;"></div>
-
-                <hr style="margin: 0em">
-                
-                <li class="mdl-list__item mdl-list__item--two-line ">
-                  <span class="mdl-list__item-primary-content" style="display: inline-flex">
-                    <span>Budget</span>
-                  </span>
-                  <B id="selectedBudget" style="margin-right: -12px;">&lt; $10</B>
-                  <span class="mdl-list__item-secondary-content" style="margin-right: 16px;">
-                    
-                    <button id="accbtn3" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-                      <i class="material-icons" role="presentation">arrow_drop_down</i>                      
-                    </button>
-                    <ul id="budgetDropdown" class="mdl-menu mdl-js-menu mdl-js-ripple-effect" for="accbtn3">
-                    </ul>
-                  </span>
-                </li>
-
-                <hr style="margin: 0em">
-
-                <li class="mdl-list__item mdl-list__item--two-line ">
-                  <span class="mdl-list__item-primary-content" style="display: inline-flex">
-                    <i style="margin-left: 10px;"class="material-icons" role="presentation">timer</i>  
-                  </span>
-                  <B id="selectedTime"style="margin-right: -12px;">&lt; 10 mins</B>
-                  <span class="mdl-list__item-secondary-content" style="margin-right: 16px;">
-                    
-                    <button id="accbtn4" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-                      <i class="material-icons" role="presentation">arrow_drop_down</i>                      
-                    </button>
-                    <ul id="timeDropdown" class="mdl-menu mdl-js-menu mdl-js-ripple-effect" for="accbtn4">
-                    </ul>
-                  </span>
-                </li>
-
-                <hr style="margin: 0em">
-
-                
-            </ul>
-            <a style="float: right;" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" href="display_recipes.html">Search Recipes</a>
+              <div class="mdl-list__item">
+                <span class="mdl-list__item-primary-content">
+                  
+                  <span>Tomato Soup</span>
+                </span>
+                <a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">keyboard_arrow_right</i></a>
+              </div>
+              <hr style="margin: 0em">
+              <div class="mdl-list__item">
+                <span class="mdl-list__item-primary-content">
+                  
+                  <span>Eggs and Toast</span>
+                </span>
+                <span class="mdl-list__item-secondary-content">
+                  <a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">keyboard_arrow_right</i></a>
+              </span>
+              </div>
+              <hr style="margin: 0em">
+              <div class="mdl-list__item">
+                <span class="mdl-list__item-primary-content">
+                  
+                  <span>Ramen Noodles</span>
+                </span>
+                <span class="mdl-list__item-secondary-content">
+                  <a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">keyboard_arrow_right</i></a>
+              </span>
+              </div>
+              <hr style="margin: 0em">
+              <div class="mdl-list__item">
+                <span class="mdl-list__item-primary-content">
+                  
+                  <span>Chicken Curry</span>
+                </span>
+                <span class="mdl-list__item-secondary-content">
+                  <a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">keyboard_arrow_right</i></a>
+              </span>
+              </div>
+              <hr style="margin: 0em">
+              <div class="mdl-list__item">
+                <span class="mdl-list__item-primary-content">
+                  
+                  <span>Sweet and Sour Pork</span>
+                </span>
+                <span class="mdl-list__item-secondary-content">
+                  <a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">keyboard_arrow_right</i></a>
+              </span>
+              </div>
+            </div>
+           
             </div>
           </div>
         </div>
@@ -232,43 +228,5 @@
     
     <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script>
-      function showMessage(value){
-        document.getElementById("message").innerHTML = value;
-      }	
-
-      $(document).ready(function(){
-          var ethnicities = ["American", "British", "Carribean", "Chinese", "French", "Greek", "Indian", "Italian", "Japanese", "Mexican", "Thai", "Any"];
-          $.each(ethnicities, function(index, value){
-              var $li = $("<li class='mdl-menu__item' onclick='updateSelectedEthnicity(this)'>" + value + "</li>"); 
-              $("#ethnicityDropdown").append($li);  
-          });
-
-          var budgets = ["&lt; $10", "$10 - $20", "$20 - $30", "$40 - $50", "Any"];
-          $.each(budgets, function(index, value){
-              var $li = $("<li class='mdl-menu__item' onclick='updateSelectedBudget(this)'>" + value + "</li>"); 
-              $("#budgetDropdown").append($li);  
-          });
-
-          var times = ["&lt; 10 mins", "10 - 20 mins", "20 - 30 mins", "40 - 50 mins", "50 - 60 mins", "Any"]
-          $.each(times, function(index, value){
-              var $li = $("<li class='mdl-menu__item' onclick='updateSelectedTime(this)'>" + value + "</li>"); 
-              $("#timeDropdown").append($li);  
-          });
-      });
-
-      function updateSelectedEthnicity(obj){
-        $("#selectedEthnicity").text(($(obj).text()));
-      }
-
-      function updateSelectedBudget(obj){
-        $("#selectedBudget").text(($(obj).text()));
-      }
-
-      function updateSelectedTime(obj){
-        $("#selectedTime").text(($(obj).text()));
-      }
-
-    </script>
   </body>
 </html>
