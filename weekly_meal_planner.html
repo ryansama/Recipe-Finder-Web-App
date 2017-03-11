@@ -164,7 +164,27 @@
           <a class="mdl-navigation__link" href="group.html"><i class="material-icons">group</i>Group Meal Planner</a>
           <a class="mdl-navigation__link" href="HelpAndSupport.html"><i class="material-icons">help_outline</i>Help & Support</a>
           <div class="mdl-layout-spacer"></div>
-          <a class="mdl-navigation__link" href="index.html"><i class="material-icons" role="presentation">cancel</i>Log Out</a>
+          <a id="show-dialog" class="mdl-navigation__link"><i class="material-icons" role="presentation">cancel</i>Log Out</a>
+            <dialog class="mdl-dialog">
+              <h4 class="mdl-dialog__content">Are you sure you want to log out?</h4>
+              <div class="mdl-dialog__actions">
+                <button type="button" class="mdl-button mdl-button--accent" onclick="dialog.close()">No</button>
+                <button type="button" class="mdl-button close">Yes</button>
+              </div>
+            </dialog>
+            <script>
+              var dialog = document.querySelector('dialog');
+              var showDialogButton = document.querySelector('#show-dialog');
+              if (! dialog.showModal) {
+                dialogPolyfill.registerDialog(dialog);
+              }
+              showDialogButton.addEventListener('click', function() {
+                dialog.showModal();
+              });
+              dialog.querySelector('.close').addEventListener('click', function() {
+                window.open('index.html', '_self');
+              });
+            </script>
         </nav>
       </div>
 
