@@ -187,3 +187,68 @@ _:-ms-input-placeholder, :root .demo-graph {
 .center-items {
   justify-content: center;
 }
+
+#chartdiv {
+  width : 100%;
+  height  : 500px;
+}
+
+.alignLow {
+    text-align:left;
+    text-transform: none;
+    width:100%;
+    font-size:22px;
+    padding-top:0.5%;
+}
+
+.alignMore {
+    text-align:center;
+    padding-bottom:0%;
+     padding-top:1%;
+    text-transform: none;
+    width:100%;
+    font-size:70px;
+}
+
+
+.alignMed {
+     text-align:left;
+    text-transform: none;
+    width:100%;
+    font-size:22px;
+    padding-top:0.5%;
+}
+
+.alignHigh {
+   text-align:left;
+    text-transform: none;
+    width:100%;
+    font-size:22px;
+    padding-top:0.5%;
+}
+
+.alignLow span {
+        float: right;
+        font-size:17px;
+        color:red;
+        font-weight:bold;
+
+}
+
+.alignMed span {
+        float: right;
+        font-size:17px;
+        color:yellow;
+        font-weight:bold;
+
+}
+
+.alignHigh span {
+       float: right;
+        font-size:17px;
+        color:limegreen;
+        font-weight:bold;
+
+}
+
+
