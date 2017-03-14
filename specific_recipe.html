@@ -143,13 +143,28 @@
               <div class="mdl-grid demo-content">
 			  <p style="font-size:20px;">Chicken Noodle Soup</p>
                 <div class="demo-charts  mdl-cell mdl-cell--12-col mdl-grid">				
-                  <div class="mdl-layout-spacer"></div>
-                 <img src="img/chickenNoodle.png">
-                 <div class="mdl-layout-spacer"></div>
+                   <div class="mdl-layout-spacer"></div>
+                   <img src="img/chickenNoodle.png">
+                   <div class="mdl-layout-spacer"></div>
+                </div>
               </div>
-          </div>
+              <span>
+                  <i class="material-icons">star</i>
+                  <i class="material-icons">star</i>
+                  <i class="material-icons">star</i>
+                  <i class="material-icons">star_border</i>
+                  <i class="material-icons">star_border</i>
+              </span>
 
-          <div class="mdl-card__actions mdl-card--border">
+          <div class="mdl-card__actions mdl-card--border">     
+              <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" for="icon-toggle-1" style="float: right;">
+              <input type="checkbox" id="icon-toggle-1" class="mdl-icon-toggle__input">
+              <i class="material-icons" style="float: right; margin-top:-40px; margin-left: 5px">thumb_down</i>
+              </label>   
+              <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" for="icon-toggle-1" style="float: right;">
+              <input type="checkbox" id="icon-toggle-2" class="mdl-icon-toggle__input">
+              <i class="material-icons" style="float: right; margin-top:-40px; margin-right: 10px">thumb_up</i>
+              </label>       
             <div class="demo-charts  mdl-cell mdl-cell--12-col mdl-grid">
               <div class="mdl-layout-spacer"></div>
                 <ul class="mdl-list">
@@ -158,7 +173,7 @@
                     <div>                    
                         <li>
                           <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                            <input type="checkbox" class="mdl-checkbox__input" checked />
+                            <input type="checkbox" class="mdl-checkbox__input" />
                             <span>1 tb butter</span>
                           </label>
                         </li>
@@ -170,7 +185,7 @@
                         </li>
                         <li>
                           <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                            <input type="checkbox" class="mdl-checkbox__input" checked />
+                            <input type="checkbox" class="mdl-checkbox__input" />
                             <span>1/2 cup chopped celery</span>
                           </label>
                         </li>
@@ -214,7 +229,7 @@
                     <div>                    
                         <li>
                           <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                            <input type="checkbox" class="mdl-checkbox__input" checked />
+                            <input type="checkbox" class="mdl-checkbox__input" />
                             <p>Melt butter over medium heat.</p>
                           </label>
                         </li>
@@ -226,13 +241,13 @@
                         </li>
                         <li>
                           <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                            <input type="checkbox" class="mdl-checkbox__input" checked />
+                            <input type="checkbox" class="mdl-checkbox__input" />
                             Pour in both broths.							
                           </label>
                         </li>
 						<li>
                           <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
-                            <input type="checkbox" class="mdl-checkbox__input" checked />
+                            <input type="checkbox" class="mdl-checkbox__input" />
 							Stir in chicken, noodles, vegetables.
                           </label>
                         </li>
@@ -251,8 +266,12 @@
 					<div class="mdl-layout-spacer"></div>
 					<img src="img/nutrition.png" style="width: 230px;height: 350px;">
 					<div class="mdl-layout-spacer"></div>
-				</div>		  
-            </div>			
+				    </div>	
+                  <a style="float: right;" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" 
+                  href="display_recipes.html" data-upgraded=",MaterialButton,MaterialRipple">Select
+                  <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span>
+                   </a>		  
+            </div>		
           </div>
         </div>
       </main>
