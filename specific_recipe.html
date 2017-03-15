@@ -156,18 +156,17 @@
                   <i class="material-icons">star_border</i>
               </span>
 				
-			  <div class = "mdl-layout-spacer">
-			  <label>
-					<button class="mdl-button mdl-js-button mdl-button--icon" style = "float: right;">
-						<i class="material-icons">thumb_down</i>
-					</button>		 
-</label>						
+			  <div class = "mdl-layout-spacer"></div>
+
 					<button class="mdl-button mdl-js-button mdl-button--icon" style = "float: right;">
 						<i class="material-icons">thumb_up</i>
+					</button>		
+											
+					<button class="mdl-button mdl-js-button mdl-button--icon" style = "float: right;">
+						<i class="material-icons">thumb_down</i>
 					</button>
-			  	
-			  </div>
-			  
+					
+										
 			  <div class="mdl-card__actions mdl-card--border">
 			  
 			  <!--
@@ -190,6 +189,7 @@
                       <i class="material-icons" role="presentation">arrow_drop_down</i>                      
                     </button>
                     <ul id="portionDropdown"class="mdl-menu mdl-js-menu mdl-js-ripple-effect" for="portionBtn"> </ul>
+					<p style="float: right; margin-right: 10px">Serving size</p>
 					</span>
 					<script>
 
@@ -239,6 +239,8 @@
 				<hr style="margin: 0em"></hr>
               <div class="mdl-layout-spacer"></div>
             </div>
+			<button id="selectBtn" class="mdl-button mdl-js-button mdl-button--raised" onclick="selectBtnClickHandler()" 
+					data-upgraded=",MaterialButton,MaterialRipple"  type="button" style = "float: right; width: 80px;height: 40px;" >Select</button>
 			<div class="demo-charts  mdl-cell mdl-cell--12-col mdl-grid">
               <div class="mdl-layout-spacer"></div>
                 <ul class="mdl-list">
@@ -322,12 +324,10 @@
 					snackbarContainer.MaterialSnackbar.showSnackbar(data);
 					});
 				}());
-					</script>
-                  <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span>
-                   </a>
-				   
-            </div>
-			
+				</script>
+                <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span>
+                   				   
+            </div>			
           </div>
         </div>
       </main>
