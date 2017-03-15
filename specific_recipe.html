@@ -138,7 +138,7 @@
         </nav>
       </div>
       <main class="mdl-layout__content mdl-color--grey-50">
-
+		
           <div class="demo-charts mdl-card__supporting-text mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
               <div class="mdl-grid demo-content">
 			  <p style="font-size:20px;">Chicken Noodle Soup</p>
@@ -155,20 +155,46 @@
                   <i class="material-icons">star_border</i>
                   <i class="material-icons">star_border</i>
               </span>
-
-          <div class="mdl-card__actions mdl-card--border">
-              <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" for="icon-toggle-1" style="float: right;">
-              <input type="checkbox" id="icon-toggle-1" class="mdl-icon-toggle__input">
-              <i class="material-icons" style="float: right; margin-top:-40px; margin-left: 5px">thumb_down</i>
-              </label>
-              <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-js-ripple-effect" for="icon-toggle-1" style="float: right;">
-              <input type="checkbox" id="icon-toggle-2" class="mdl-icon-toggle__input">
-              <i class="material-icons" style="float: right; margin-top:-40px; margin-right: 10px">thumb_up</i>
-              </label>
+				
+			  <div class = "mdl-layout-spacer">
+			  <label>
+					<button class="mdl-button mdl-js-button mdl-button--icon" style = "float: right;">
+						<i class="material-icons">thumb_down</i>
+					</button>		 
+</label>						
+					<button class="mdl-button mdl-js-button mdl-button--icon" style = "float: right;">
+						<i class="material-icons">thumb_up</i>
+					</button>
+			  	
+			  </div>
+			  
+			  <div class="mdl-card__actions mdl-card--border">
+			  
+			  <!--
+			  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+			  <script>
+				function thumbClick(){
+					$('#thumbDwn').attr('disabled', true);
+				}
+			
+			  </script>
+			  -->
+			  
             <div class="demo-charts  mdl-cell mdl-cell--12-col mdl-grid">
               <div class="mdl-layout-spacer"></div>
                 <ul class="mdl-list">
 					<p style="font-size:20px;">Ingredients</p>
+					
+					<span>
+					<button id="portionBtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style = "float: right;">
+                      <i class="material-icons" role="presentation">arrow_drop_down</i>                      
+                    </button>
+                    <ul id="portionDropdown"class="mdl-menu mdl-js-menu mdl-js-ripple-effect" for="portionBtn"> </ul>
+					</span>
+					<script>
+
+					</script>
+					
                   <li class="info-title">
                     <div>
                         <li>
@@ -209,7 +235,6 @@
                         </li>
                     </div>
                   </li>
-
                 </ul>
 				<hr style="margin: 0em"></hr>
               <div class="mdl-layout-spacer"></div>
@@ -224,7 +249,7 @@
 						<i class="material-icons" role="presentation" style="margin-left:110px; margin-top:-2px">schedule</i>
 						19 mins
 					</span>
-
+					
                   <li class="info-title">
                     <div>
                         <li>
@@ -261,20 +286,52 @@
                     </div>
                   </li>
                 </ul>
+				
 				<div class="mdl-layout-spacer"></div>
+				<hr id="hr-bottom" align="center" width="90%">
 					<div class="demo-charts  mdl-cell mdl-cell--12-col mdl-grid">
 					<div class="mdl-layout-spacer"></div>
 					<img src="img/nutrition.png" style="width: 230px;height: 350px;">
 					<div class="mdl-layout-spacer"></div>
 				    </div>
-                  <a style="float: right;" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-                  href="display_recipes.html" data-upgraded=",MaterialButton,MaterialRipple">Select
+				<div class="mdl-layout-spacer">
+				<span>
+					<button id="selectBtn" class="mdl-button mdl-js-button mdl-button--raised" onclick="selectBtnClickHandler()" 
+					data-upgraded=",MaterialButton,MaterialRipple"  type="button" style = "float: right; width: 80px;height: 40px;" >Select</button>
+			
+					<div id="toast" class="mdl-js-snackbar mdl-snackbar" >
+						<div class="mdl-snackbar__text"></div>
+						<button class="mdl-snackbar__action" type="button"></button>
+					</div>
+				</span>
+				
+				</div>
+				<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+				<script>
+				function selectBtnClickHandler(){
+					$('#selectBtn').attr('disabled', true);
+				}
+				
+				(function () {				
+					'use strict';
+					var snackbarContainer = document.querySelector('#toast');
+					var showToastButton = document.querySelector('#selectBtn');
+					showToastButton.addEventListener('click', function() {
+					'use strict';
+					var data = {message: 'Added to favourites'};
+					snackbarContainer.MaterialSnackbar.showSnackbar(data);
+					});
+				}());
+					</script>
                   <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span>
                    </a>
+				   
             </div>
+			
           </div>
         </div>
       </main>
+	  
     </div>
       <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" style="position: fixed; left: -1000px; height: -1000px;">
         <defs>
