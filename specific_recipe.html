@@ -158,26 +158,38 @@
 				
 			  <div class = "mdl-layout-spacer"></div>
 
-					<button class="mdl-button mdl-js-button mdl-button--icon" style = "float: right;">
+					<button id = "thumbUp" class="mdl-button mdl-js-button mdl-button--icon" style = "float: right; margin-top: -8px">
 						<i class="material-icons">thumb_up</i>
 					</button>		
 											
-					<button class="mdl-button mdl-js-button mdl-button--icon" style = "float: right;">
+					<button id = "thumbDwn" class="mdl-button mdl-js-button mdl-button--icon" style = "float: right; margin-top: -8px">
 						<i class="material-icons">thumb_down</i>
 					</button>
 					
 										
 			  <div class="mdl-card__actions mdl-card--border">
 			  
-			  <!--
-			  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+			  
 			  <script>
-				function thumbClick(){
-					$('#thumbDwn').attr('disabled', true);
-				}
-			
+				(function thumbClick() {
+  
+				var upBtn = document.querySelector('#thumbUp');
+				var dwnBtn = document.querySelector('#thumbDwn');
+				var handler1 = function(event) {upBtn.style.backgroundColor = '';};
+				var handler2 = function(event) {dwnBtn.style.backgroundColor = '';};
+				upBtn.addEventListener('click', function() {
+					'use strict';
+					upBtn.style.backgroundColor = '#' + 999;
+					dwnBtn.style.backgroundColor = '#' + 0;
+				});
+				dwnBtn.addEventListener('click', function() {
+					'use strict';
+					dwnBtn.style.backgroundColor = '#' + 999;
+					upBtn.style.backgroundColor = '#' + 20;
+				});
+				}());
+		
 			  </script>
-			  -->
 			  
             <div class="demo-charts  mdl-cell mdl-cell--12-col mdl-grid">
               <div class="mdl-layout-spacer"></div>
@@ -322,12 +334,13 @@
 					snackbarContainer.MaterialSnackbar.showSnackbar(data);
 					});
 				}());
-				</script>
-                <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span>
+				</script>			
                    				   
             </div>			
           </div>
         </div>
+		
+
       </main>
 	  
     </div>
