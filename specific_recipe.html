@@ -161,16 +161,30 @@
 					<button id = "thumbUp" class="mdl-button mdl-js-button mdl-button--icon" style = "float: right; margin-top: -8px">
 						<i class="material-icons">thumb_up</i>
 					</button>		
-											
+					
+					<div id="upToast" class="mdl-js-snackbar mdl-snackbar" >
+						<div class="mdl-snackbar__text"></div>
+						<button class="mdl-snackbar__action" type="button"></button>
+					</div>
+					
 					<button id = "thumbDwn" class="mdl-button mdl-js-button mdl-button--icon" style = "float: right; margin-top: -8px">
 						<i class="material-icons">thumb_down</i>
 					</button>
+					
+					<div id="downToast" class="mdl-js-snackbar mdl-snackbar" >
+						<div class="mdl-snackbar__text"></div>
+						<button class="mdl-snackbar__action" type="button"></button>
+					</div>
 					
 										
 			  <div class="mdl-card__actions mdl-card--border">
 			  
 			  
 			  <script>
+				function selectBtnClickHandler(){
+					$('#selectBtn').attr('disabled', true);
+				}
+				
 				(function thumbClick() {
   
 				var upBtn = document.querySelector('#thumbUp');
@@ -186,7 +200,29 @@
 					'use strict';
 					dwnBtn.style.backgroundColor = '#999';
 					upBtn.style.backgroundColor = '#FFF';
-				});
+				});				
+				}());
+				
+				(function () {				
+					'use strict';
+					var snackbarContainer = document.querySelector('#upToast');
+					var showToastButton = document.querySelector('#thumbUp');
+					showToastButton.addEventListener('click', function() {
+					'use strict';
+					var add = {message: 'Added to favourites'};
+					snackbarContainer.MaterialSnackbar.showSnackbar(add);
+					});
+				}());
+				
+				(function () {				
+					'use strict';
+					var snackbarContainer = document.querySelector('#downToast');
+					var showToastButton = document.querySelector('#thumbDwn');
+					showToastButton.addEventListener('click', function() {
+					'use strict';
+					var add = {message: 'Removed from favourites'};
+					snackbarContainer.MaterialSnackbar.showSnackbar(add);
+					});
 				}());
 		
 			  </script>
@@ -343,7 +379,7 @@
 					var showToastButton = document.querySelector('#selectBtn');
 					showToastButton.addEventListener('click', function() {
 					'use strict';
-					var data = {message: 'Added to favourites'};
+					var data = {message: 'Added to health tracker'};
 					snackbarContainer.MaterialSnackbar.showSnackbar(data);
 					});
 				}());
