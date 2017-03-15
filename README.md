@@ -49,4 +49,4 @@ Our prototype can be accessed at <a target="_blank" href="https://recipe-finder-
 
 **V00822365** set up the GitHub repository, template code, and the Heroku web app. He has written the code for the Search Recipes screen, the Display Recipes screen, Task Bar, and Login screen. He has also searched for various bugs, fixed some and cleaned up the repository throughout the phase and created the README. 
 
-**V00820622**
+**V00820622** wrote the code for the Profile and Group Meal Planner pages. 
