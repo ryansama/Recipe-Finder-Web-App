@@ -179,13 +179,13 @@
 				var handler2 = function(event) {dwnBtn.style.backgroundColor = '';};
 				upBtn.addEventListener('click', function() {
 					'use strict';
-					upBtn.style.backgroundColor = '#' + 999;
-					dwnBtn.style.backgroundColor = '#' + 0;
+					upBtn.style.backgroundColor = '#999';
+					dwnBtn.style.backgroundColor = '#FFF';
 				});
 				dwnBtn.addEventListener('click', function() {
 					'use strict';
-					dwnBtn.style.backgroundColor = '#' + 999;
-					upBtn.style.backgroundColor = '#' + 20;
+					dwnBtn.style.backgroundColor = '#999';
+					upBtn.style.backgroundColor = '#FFF';
 				});
 				}());
 		
@@ -200,11 +200,24 @@
 					<button id="portionBtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style = "float: right;">
                       <i class="material-icons" role="presentation">arrow_drop_down</i>                      
                     </button>
-                    <ul id="portionDropdown"class="mdl-menu mdl-js-menu mdl-js-ripple-effect" for="portionBtn"> </ul>
-					<p style="float: right; margin-right: 10px">Serving size</p>
+                    <ul id="portionDropdown"class="mdl-menu mdl-js-menu mdl-js-ripple-effect" for="portionBtn"> 
+						
+						<li class='mdl-menu__item' onclick='updateServingSize(this)'>1</li>
+						<li class='mdl-menu__item' onclick='updateServingSize(this)'>2</li>
+						<li class='mdl-menu__item' onclick='updateServingSize(this)'>3</li>
+						<li class='mdl-menu__item' onclick='updateServingSize(this)'>4</li>
+						<li class='mdl-menu__item' onclick='updateServingSize(this)'>5</li>
+						<li class='mdl-menu__item' onclick='updateServingSize(this)'>6</li>
+					</ul>
+					
+					<p style="float: right; margin-right: 10px" id = "servingSize">Serving size</p>
+					
 					</span>
+					<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 					<script>
-
+					function updateServingSize(obj){
+						$("#servingSize").text("Serving size: " + ($(obj).text()));
+					}
 					</script>
 					
                   <li class="info-title">
@@ -308,7 +321,7 @@
 				    </div>
 				<div class="mdl-layout-spacer">
 				<span>
-					<button id="selectBtn" class="mdl-button mdl-js-button mdl-button--raised" onclick="selectBtnClickHandler()" 
+					<button id="selectBtn" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="selectBtnClickHandler()" 
 					data-upgraded=",MaterialButton,MaterialRipple"  type="button" style = "float: right; width: 80px;height: 40px;" >Select</button>
 			
 					<div id="toast" class="mdl-js-snackbar mdl-snackbar" >
