@@ -62,7 +62,7 @@
   </head>
   <body>
     <div class="demo-layout mdl-layout">
-      
+
       <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
         <header class="demo-drawer-header">
           <img src="img/user.jpg" class="demo-avatar">
@@ -108,9 +108,9 @@
           </div>
           <div class="demo-charts  mdl-cell mdl-cell--12-col mdl-grid"  style="margin-top:-16px;">
             <div class="mdl-layout-spacer"></div>
-              <form action="#">
+              <form>
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                  <input class="mdl-textfield__input" type="text" id="sample3">
+                  <input class="mdl-textfield__input" type="text" id="emailInput">
                   <label class="mdl-textfield__label" for="sample3">Email</label>
                 </div>
               </form>
@@ -118,9 +118,9 @@
           </div>
           <div class="demo-charts  mdl-cell mdl-cell--12-col mdl-grid" style="margin-top:-16px">
             <div class="mdl-layout-spacer"></div>
-              <form action="#">
+              <form>
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                  <input class="mdl-textfield__input" type="password" id="sample3">
+                  <input class="mdl-textfield__input" type="password" id="pwInput">
                   <label class="mdl-textfield__label" for="sample3">Password</label>
                 </div>
               </form>
@@ -128,11 +128,24 @@
           </div>
           <div class="demo-charts  mdl-cell mdl-cell--12-col mdl-grid" style="margin-top:-16px">
             <div class="mdl-layout-spacer"></div>
-            <form>
-              <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect" type="submit" formaction="recipes.html">Sign-In</button>
-              </form>
+              <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect" onclick="signIn();">Sign-In</button>
             <div class="mdl-layout-spacer"></div>
           </div>
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+          <script>
+            function signIn(){
+              var email = $.trim($("#emailInput").val());
+              var pw = $.trim($("#pwInput").val());
+
+              if(email.length < 1 || pw.length < 1){
+                alert("Please enter an email and a password.");
+                return;
+              }
+
+              window.location.href = "recipes.html";
+
+            }
+          </script>
           <div class="demo-charts  mdl-cell mdl-cell--12-col mdl-grid" style="margin-top:-2px">
             <div class="mdl-layout-spacer"></div>
               <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-js-ripple-effect" onclick="window.open('http://d33v4339jhl8k0.cloudfront.net/docs/assets/55316ed3e4b0eb143c62958e/images/564bced7c697910ae05f47e5/file-AJ3u8DbPeQ.png', '_blank');">Create Account</button>
@@ -144,7 +157,7 @@
             <div class="mdl-layout-spacer"></div>
           </div>
         </div>
-        
+
       </main>
     </div>
       <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" style="position: fixed; left: -1000px; height: -1000px;">
@@ -194,7 +207,7 @@
           </g>
         </defs>
       </svg>
-      
+
     <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 
   </body>
