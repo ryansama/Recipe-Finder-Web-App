@@ -34,7 +34,7 @@ A few notes should be considered when using our prototype app. We have decided t
 
 As is the standard for high-fidelity prototypes, no real data is stored, collected, or shown in the RecipeFinder prototype. The prototype should be used to view where and how data would be shown to the user.
 
-__**Bug**__ Please note that there is an issue with running this web app with Firefox, Safari, and IE where some eleents overlap each other. Therefore, please access this app with <b>Google Chrome</b> for guarenteed optimum functionality.
+__**Bug**__: Please note that there is an issue with running this web app with Firefox, Safari, and IE where some eleents overlap each other. Therefore, please access this app with <b>Google Chrome</b> for guarenteed optimum functionality.
 
 ---
 
