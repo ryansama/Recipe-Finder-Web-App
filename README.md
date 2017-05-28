@@ -43,10 +43,10 @@ Our prototype can be accessed at <a target="_blank" href="https://recipe-finder-
 ---
 
 ## Contributions
-**V00825042** wrote the code for Help & Support and the code for View Specific Recipe. He also made minor tweaks to files that maps to View Specific Recipe.
+[Yuki Hayashi](https://github.com/YKHGuy) wrote the code for Help & Support and the code for View Specific Recipe. He also made minor tweaks to files that maps to View Specific Recipe.
 
-**V00841719** has written the code for Weekly Meal Planner, Saved Recipes, and Health Tracker. He also fixed minor bugs across other files.
+[Dhaimil Modi](https://github.com/Dhaimil) has written the code for Weekly Meal Planner, Saved Recipes, and Health Tracker. He also fixed minor bugs across other files.
 
-**V00822365** set up the GitHub repository, template code, and the Heroku web app. He has written the code for the Search Recipes screen, the Display Recipes screen, Task Bar, and Login screen. He has also searched for various bugs, fixed some and cleaned up the repository throughout the phase and created the README. 
+[Ryan Samarajeewa](https://github.com/ryansama/) set up the GitHub repository, template code, and the Heroku web app. He has written the code for the Search Recipes screen, the Display Recipes screen, Task Bar, and Login screen. He has also searched for various bugs, fixed some and cleaned up the repository throughout the phase and created the README. 
 
-**V00820622** wrote the code for the Profile and Group Meal Planner pages. 
+[Andrew Tran](https://github.com/trandrew96) wrote the code for the Profile and Group Meal Planner pages. 
